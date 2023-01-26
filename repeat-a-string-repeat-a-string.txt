@@ -1,0 +1,13 @@
+function repeatStringNumTimes(str, num) {
+let newString = "";
+    if (num > 0) {
+      for (let i = 0; i < num; i++){
+          if (i < num) { 
+          newString += str;
+          // console.log(newString);
+          }
+      }
+    }
+    return newString;
+}
+console.log(repeatStringNumTimes("abc", 3));
