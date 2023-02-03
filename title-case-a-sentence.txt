@@ -1,0 +1,27 @@
+function titleCase(str) {
+
+  // take str, make it lowercase
+  let makeStrLow = str.toLowerCase();
+  
+  // split the words by " "
+  let strWords = makeStrLow.split(" ");
+
+  // loop trough each character position (i)
+  for (let i = 0; i < strWords.length; i++){
+      // strWords at position i 
+      // charAt(0) = return each character from position 0 from word
+      // change toUpperCase()
+      // slice(1) start at position 1 from word
+      
+      strWords[i] = strWords[i].charAt(0).toUpperCase() + strWords[i].slice(1);
+    
+  }
+  // join all elements into newStr, " " as a seperator
+  let newStr = strWords.join(" ");
+  return newStr;
+
+}
+console.log(titleCase("I'm a little tea pot"));
+console.log(titleCase("sHoRt AnD sToUt"));
+console.log(titleCase("HERE IS MY HANDLE HERE IS MY SPOUT"));
+
