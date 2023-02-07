@@ -1,0 +1,23 @@
+function bouncer(arr) {
+
+let newArr = []; // new Array
+newArr.push(...arr.slice()); // remove all falsely values from array
+
+
+for (let i = 0; i < arr.length; i++) {  // loop each element, delete if false
+  if (newArr[i] == false) {
+    delete newArr[i];
+  }
+}
+
+
+let len = newArr.length, i;
+for(i = 0; i < len; i++ )
+    newArr[i] && newArr.push(newArr[i]);  // copy non-empty values to the end of the array
+
+newArr.splice(0 , len);  // cut the array and leave only the non-empty values
+  return newArr;
+}
+
+console.log(bouncer([7, "ate", "", false, 9]));
+
