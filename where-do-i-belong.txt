@@ -1,0 +1,20 @@
+function getIndexToIns(arr, num) {
+//sort arr ascending included with multipe decimals
+arr.sort(function compareNumbers (a,b) { return a - b});
+// loop if i === arr[i] push(num)
+    for (let i = 0; i < arr.length; i++) {
+      if (num <= arr[i]) {
+      return i;
+      }
+    }
+  // if num bigger than arr length (last position of arr)
+  if (num > arr.length) {
+    return arr.length;
+  }
+  return 0;
+}
+
+console.log(getIndexToIns([40, 60], 50));
+console.log(getIndexToIns([5, 3, 20, 3], 5));
+console.log(getIndexToIns([2, 5, 10], 15));
+console.log(getIndexToIns([], 1));
